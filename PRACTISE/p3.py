@@ -1,0 +1,6 @@
+# f = open("simple.txt","w") 
+f = open("simple.txt","r")
+c = f.read()
+f = open("simple1.txt","w") 
+f.write(c)
+print(c)

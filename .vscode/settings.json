@@ -1,0 +1,2 @@
+story=A life is a greate to think more and expolore the world.
+print(len(story))
