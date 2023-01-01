@@ -139,10 +139,6 @@ from telegram.ext import *
 from requests import *
 updater = Updater(token="5369531550:AAFekKbGtdylAHeTTj06Zyd5YuMWyHrdH_0")
 dispatcher = updater.dispatcher
-randomPeopleText = "Random Person"
-randomImageText = "Random Image"
-randomPeopleUrl = "https://thispersondoesnotexist.com/image"
-randomPImageUrl = "https://picsum.photos/1200"
 likes = 0
 dislikes = 0
 # chatid= Message.chat_id
@@ -192,66 +188,12 @@ def messageHandler(update: Update, context: CallbackContext):
         context.bot.send_message(chat_id=update.effective_chat.id,
                                  text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
 
-    if 'D.S.A.' in update.message.text:
-            # here forward the massage for dsa
-        update.message.reply_text('BOOKs')
-            # update.message.forward_from_message_id(8532)
-            # context.bot.send_message(chat_id=update.message.chat_id,reply_to_message_id=update.message.message_id)
-            # here you can forward the dsa books
-        update.message.reply_text('PYSQs')
-            # here you can forward the dsa pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the dsa notes
-
-    elif 'D.B.M.S.' in update.message.text:
-            # here forward the massage for dbms
-        update.message.reply_text('BOOKs')
-            # here you can forward the dbms books
-        update.message.reply_text('PYSQs')
-            # here you can forward the dbms pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the dbms notes
-
-    elif 'd.f.' in update.message.text:
-            # here forward the massage for d.f.
-        update.message.reply_text('BOOKs')
-            # here you can forward the d.f. books
-        update.message.reply_text('PYSQs')
-            # here you can forward the d.f. pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the d.f. notes
-
-    elif 'p&s' in update.message.text:
-            # here forward the massage for p&s
-        update.message.reply_text('BOOKs')
-            # here you can forward the p&s books
-        update.message.reply_text('PYSQs')
-            # here you can forward the p&s pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the p&s notes
-
-    elif 'etc' in update.message.text:
-            # here forward the massage for etc
-        update.message.reply_text('BOOKs')
-            # here you can forward the etc books
-        update.message.reply_text('PYSQs')
-            # here you can forward the etc pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the etc notes
-
-    elif 'ic' in update.message.text:
-            # here forward the massage for ic
-        update.message.reply_text('BOOKs')
-             # here you can forward the ic books
-        update.message.reply_text('PYSQs')
-            # here you can forward the ic pysqs
-        update.message.reply_text('NOTEs')
-            # here you can forward the ic notes
-    elif 'exit' in update.message.text:
+    
+    if 'exit' in update.message.text:
         # function call to messege handeler
-        CallbackQueryHandler(startCommand)
-        # messageHandler(Update,CallbackContext)
-        # sem3(update,CallbackQuery)
+        startCommand(update, context)
+    # if 'Exit' in update.message.text:
+        
     if 'sem3' in update.message.text:
         # if 'dsa' in update.message.text:
         sem3(update, context)
@@ -260,12 +202,69 @@ def messageHandler(update: Update, context: CallbackContext):
 
     if 'sem1&sem2' in update.message.text:
         sem1_button = [[KeyboardButton('B.M.E.')], [KeyboardButton('MATHS1')], [KeyboardButton('MATHS2')], [KeyboardButton('ENGLISH')], [KeyboardButton('E.G.D')], [
-            KeyboardButton('Environmental Science')], [KeyboardButton('P.P.S.')], [KeyboardButton('B.E.E.')], [KeyboardButton('Physics')], [KeyboardButton('B.E.')]]
+            KeyboardButton('Environmental Science')], [KeyboardButton('P.P.S.')], [KeyboardButton('B.E.E.')], [KeyboardButton('Physics')], [KeyboardButton('B.E.')], [KeyboardButton('exit')]]
         context.bot.send_message(chat_id=update.effective_chat.id,
                                  text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem1_button))
 
     # SEM3
+    if 'D.S.A.' in update.message.text:
+        # here forward the massage for dsa
+        message=update.message;
+        update.message.reply_text('BOOKs')
+        context.bot.send_message(chat_id=1241390756,text=message.text)
+        # update.message.forward_from_message_id(8532)
+        # context.bot.send_message(chat_id=update.message.chat_id,reply_to_message_id=update.message.message_id)
+        # here you can forward the dsa books
+        update.message.reply_text('PYSQs')
+        # here you can forward the dsa pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the dsa notes
 
+    if 'D.B.M.S.' in update.message.text:
+        # here forward the massage for dbms
+        update.message.reply_text('BOOKs')
+        # here you can forward the dbms books
+        update.message.reply_text('PYSQs')
+        # here you can forward the dbms pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the dbms notes
+
+    if 'd.f.' in update.message.text:
+        # here forward the massage for d.f.
+        update.message.reply_text('BOOKs')
+        # here you can forward the d.f. books
+        update.message.reply_text('PYSQs')
+        # here you can forward the d.f. pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the d.f. notes
+
+    if 'p&s' in update.message.text:
+        # here forward the massage for p&s
+        update.message.reply_text('BOOKs')
+        # here you can forward the p&s books
+        update.message.reply_text('PYSQs')
+        # here you can forward the p&s pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the p&s notes
+
+    if 'etc' in update.message.text:
+        # here forward the massage for etc
+        update.message.reply_text('BOOKs')
+        # here you can forward the etc books
+        update.message.reply_text('PYSQs')
+        # here you can forward the etc pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the etc notes
+
+    if 'ic' in update.message.text:
+        # here forward the massage for ic
+        update.message.reply_text('BOOKs')
+        # here you can forward the ic books
+        update.message.reply_text('PYSQs')
+        # here you can forward the ic pysqs
+        update.message.reply_text('NOTEs')
+        # here you can forward the ic notes
+        
     # ==SEM1 AND SEM2==#
     if 'B.M.E.' in update.message.text:
         # here forward the massage for B.M.E.
@@ -358,16 +357,7 @@ def messageHandler(update: Update, context: CallbackContext):
         # here you can forward the Physics notes
 
 
-def queryHandler(update: Update, context: CallbackContext):
-    query = update.callback_query.data
-    update.callback_query.answer()
 
-    global likes, dislikes
-    if "like" in query:
-        likes += 1
-    if "dislike" in query:
-        dislikes += 1
-    print(f"likes => {likes} and dislikes => {dislikes}")
 
 
 dispatcher.add_handler(CommandHandler("start", startCommand))
