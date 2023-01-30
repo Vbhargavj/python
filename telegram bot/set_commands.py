@@ -52,11 +52,9 @@
 #     if 'how are you' in text:
 #         return 'I\'m good!'
 
-#     if 'bc' in text:
-#         return 'tu mc with bc '
+#   
 
-#     if 'bhos' in text:
-#         return 'kam kar madarchod'
+#     
 
 #     if 'father' in text:
 #         return 'my father is bhargav'
@@ -148,7 +146,8 @@ dislikes = 0
 allowedUsernames = []
 
 # this commands is use to
-
+print("Bot starting.....................\n");
+print(Update._effective_user.name);
 
 def startCommand(update: Update, context: CallbackContext):
     buttons = [[KeyboardButton('sem1&sem2')], [KeyboardButton('sem3')]]
@@ -156,7 +155,7 @@ def startCommand(update: Update, context: CallbackContext):
                              text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(buttons))
 # def sem3(update: Update, context: CallbackContext):
     # # if 'dsa' in update.message.text:
-    # sem3_button = [[KeyboardButton('dsa')],[KeyboardButton('dbms')],[KeyboardButton('p&s')],[KeyboardButton('etc')],[KeyboardButton('ic')],[KeyboardButton('d.f.')]]
+    # sem3_button = [[KeyboardButton('dsa')],[KeyboardButton('dbms')],[KeyboardButton('p&s')],[KeyboardButton('ETC')],[KeyboardButton('ic')],[KeyboardButton('d.f.')]]
     # context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
 
 
@@ -179,25 +178,24 @@ def messageHandler(update: Update, context: CallbackContext):
 
     #     buttons = [[InlineKeyboardButton("👍", callback_data="like")], [InlineKeyboardButton("👎", callback_data="dislike")]]
     #     context.bot.send_message(chat_id=update.effective_chat.id, reply_markup=InlineKeyboardMarkup(buttons), text="Did you like the image?")
-    
+
     # sem 3 subjact buttons
     def sem3(update: Update, context: CallbackContext):
         update.message.reply_text('bhargavbhai')
         sem3_button = [[KeyboardButton('D.S.A.')], [KeyboardButton('D.B.M.S.')], [KeyboardButton('p&s')], [
-            KeyboardButton('etc')], [KeyboardButton('ic')], [KeyboardButton('d.f.')], [KeyboardButton('exit')]]
+            KeyboardButton('ETC')], [KeyboardButton('ic')], [KeyboardButton('d.f.')], [KeyboardButton('exit')]]
         context.bot.send_message(chat_id=update.effective_chat.id,
                                  text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
 
-    
     if 'exit' in update.message.text:
         # function call to messege handeler
         startCommand(update, context)
     # if 'Exit' in update.message.text:
-        
+
     if 'sem3' in update.message.text:
         # if 'dsa' in update.message.text:
         sem3(update, context)
-        
+
         # //how to create exit button in python telegram bot?
 
     if 'sem1&sem2' in update.message.text:
@@ -209,9 +207,9 @@ def messageHandler(update: Update, context: CallbackContext):
     # SEM3
     if 'D.S.A.' in update.message.text:
         # here forward the massage for dsa
-        message=update.message;
+        message = update.message
         update.message.reply_text('BOOKs')
-        context.bot.send_message(chat_id=1241390756,text=message.text)
+        context.bot.send_message(chat_id=1241390756, text=message.text)
         # update.message.forward_from_message_id(8532)
         # context.bot.send_message(chat_id=update.message.chat_id,reply_to_message_id=update.message.message_id)
         # here you can forward the dsa books
@@ -247,14 +245,14 @@ def messageHandler(update: Update, context: CallbackContext):
         update.message.reply_text('NOTEs')
         # here you can forward the p&s notes
 
-    if 'etc' in update.message.text:
-        # here forward the massage for etc
+    if 'ETC' in update.message.text:
+        # here forward the massage for ETC
         update.message.reply_text('BOOKs')
-        # here you can forward the etc books
+        # here you can forward the ETC books
         update.message.reply_text('PYSQs')
-        # here you can forward the etc pysqs
+        # here you can forward the ETC pysqs
         update.message.reply_text('NOTEs')
-        # here you can forward the etc notes
+        # here you can forward the ETC notes
 
     if 'ic' in update.message.text:
         # here forward the massage for ic
@@ -264,7 +262,7 @@ def messageHandler(update: Update, context: CallbackContext):
         # here you can forward the ic pysqs
         update.message.reply_text('NOTEs')
         # here you can forward the ic notes
-        
+
     # ==SEM1 AND SEM2==#
     if 'B.M.E.' in update.message.text:
         # here forward the massage for B.M.E.
@@ -357,12 +355,10 @@ def messageHandler(update: Update, context: CallbackContext):
         # here you can forward the Physics notes
 
 
-
-
-
 dispatcher.add_handler(CommandHandler("start", startCommand))
 dispatcher.add_handler(MessageHandler(Filters.text, messageHandler))
 # dispatcher.add_handler(CallbackQueryHandler(queryHandler))
 updater.start_polling()
 
 # exit button not work solve it
+# now exit button work solve by call previus function button 

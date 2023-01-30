@@ -9,7 +9,7 @@ def forward_document(update, context):
         chat_id=chat_id, from_chat_id=fchat_id, message_id=message_id)
 
 updater = Updater(
-    '5369531550:AAFekKbGtdylAHeTTj06Zyd5YuMWyHrdH_0', use_context=True)
+    '1925876251:AAGU1-DU8IpE5pC8oj1YVAxd6goLPJBRUSc', use_context=True)
 
 updater.dispatcher.add_handler(CommandHandler(
     'forward_document', forward_document))
