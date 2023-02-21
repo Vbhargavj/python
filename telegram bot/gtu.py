@@ -1,137 +1,3 @@
-
-
-# from telegram.ext import *
-
-# # import keys
-
-# # # start of online server proxy config
-
-# # import urllib3
-# # import telepot.api
-# # proxy_url = 'http://proxy.server:3128'
-
-# # telepot.api._pools = {
-# #     'default': urllib3.ProxyManager(proxy_url=proxy_url, num_pools=3, maxsize=10, retries=False, timeout=30), }
-
-# # telepot.api._onetime_pool_spec = (urllib3.ProxyManager, dict(proxy_url=proxy_url, num_pools=1, maxsize=1, retries=False, timeout=30))
-
-# # end of online server proxy config
-# # print('Starting up bot...')
-
-
-# # Lets us use the /start command
-# def start_command(update, context):
-#     update.message.reply_text('Hello there! I\'m a bot. What\'s up?')
-
-
-# # Lets us use the /help command
-# def help_command(update, context):
-#     update.message.reply_text('Try typing anything and I will do my best to respond!')
-
-
-# # Lets us use the /custom command
-# def custom_command(update, context):
-#     update.message.reply_text('This is a custom command, you can add whatever text you want here.')
-
-
-# def handle_response(text) -> str:
-#     # Create your own response logic
-
-#     if 'hello' in text:
-#         return 'Hey there!'
-#     if 'hii' in text :
-#         return 'kam karne madarchod'
-#     # if 'fact1' in text:
-#     #     return 'you are big madarshod'
-#     # if 'fact2' in text:
-#     #     return 'you also bhudhishod'
-#     # if 'fact3' in text:
-#     #     return 'krisha is your.....'
-#     # if 'fact4' in text:
-#     #     return 'abe mc bas mane atlij khabar se'
-#     if 'how are you' in text:
-#         return 'I\'m good!'
-
-#   
-
-#     
-
-#     if 'father' in text:
-#         return 'my father is bhargav'
-#     return 'I don\'t understand'
-
-
-# def handle_message(update, context):
-#     # Get basic info of the incoming messagep
-#     message_type = update.message.chat.type
-#     text = str(update.message.text).lower()
-#     response = ''
-
-#     # Print a log for debugging
-#     print(f'User ({update.message.chat.id}) says: "{text}" in: {message_type}')
-
-#     # React to group messages only if users mention the bot directly
-#     if message_type == 'group':
-#         # Replace with your bot username
-#         if '@umangbhjosbot' in text:
-#             new_text = text.replace('@umangbhjosbot', '').strip()
-#             response = handle_response(new_text)
-#     else:
-#         response = handle_response(text)
-
-#     # Reply normal if the message is in private
-#     update.message.reply_text(response)
-
-
-# # Log errors
-# def error(update, context):
-#     print(f'Update {update} caused error {context.error}')
-
-
-# # Run the program
-# if __name__ == '__main__':
-#     updater = Updater('5369531550:AAGksMZP3qS7P0Y7moq-SAixfZuzwPTYRLs', use_context=True)
-#     dp = updater.dispatcher
-
-#     # Commands
-#     dp.add_handler(CommandHandler('start', start_command))
-#     dp.add_handler(CommandHandler('help', help_command))
-#     dp.add_handler(CommandHandler('custom', custom_command))
-
-#     # Messages
-#     dp.add_handler(MessageHandler(Filters.text, handle_message))
-
-#     # Log all errors
-#     dp.add_error_handler(error)
-
-#     # Run the bot
-#     updater.start_polling(0)
-#     updater.idle()
-# from telegram import *
-# from telegram.ext import *
-
-# updater = Updater('5369531550:AAFekKbGtdylAHeTTj06Zyd5YuMWyHrdH_0',use_context= True)
-
-# sem1_sem2 = "sem1&sem2"
-# sem3 = "sem3"
-
-# def start(update: Update,context:CallbackContext):
-#     buttons = [[KeyboardButton("sem1&sem2")],[KeyboardButton("sem3")]]
-#     context.bot.send_message(chat_id=update.effective_chat.id,text="welcom",
-#     reply_markup=ReplyKeyboardMarkup(buttons))
-#     # update.message.reply_text('hey this is trial bot of bhargav')
-#     # update.callback_query.
-# def messageHandler(update: Update, context: CallbackContext):
-#     if sem1_sem2 in update.message.text:
-#         print('sem1_sem2')
-#     if sem3 in update.message.text:
-#         print('sem3')
-# updater.dispatcher.add_handler(CommandHandler('start',start))
-# updater.dispatcher.add_handler(messageHandler(Filters.text,messageHandler))
-# updater.start_polling()
-
-
-# this is the main our function
 from telegram import *
 from telegram.ext import *
 from requests import *
@@ -139,53 +5,29 @@ updater = Updater(token="5369531550:AAFekKbGtdylAHeTTj06Zyd5YuMWyHrdH_0")
 dispatcher = updater.dispatcher
 likes = 0
 dislikes = 0
-# chatid= Message.chat_id
-# fchatid=1241390756
-# mid=8530
 
 allowedUsernames = []
 
 # this commands is use to
-print("Bot starting.....................\n");
-print(Update._effective_user.name);
+print("Bot starting.....................\n")
+# print(Update._effective_user.name)
+
 
 def startCommand(update: Update, context: CallbackContext):
     buttons = [[KeyboardButton('sem1&sem2')], [KeyboardButton('sem3')]]
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(buttons))
-# def sem3(update: Update, context: CallbackContext):
-    # # if 'dsa' in update.message.text:
-    # sem3_button = [[KeyboardButton('dsa')],[KeyboardButton('dbms')],[KeyboardButton('p&s')],[KeyboardButton('ETC')],[KeyboardButton('ic')],[KeyboardButton('d.f.')]]
-    # context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
+
+
+def sem3(update: Update, context: CallbackContext):
+    update.message.reply_text('bhargavbhai')
+    sem3_button = [[KeyboardButton('D.S.A.')], [KeyboardButton('D.B.M.S.')], [KeyboardButton('p&s')], [
+        KeyboardButton('ETC')], [KeyboardButton('ic')], [KeyboardButton('d.f.')], [KeyboardButton('exit')]]
+    context.bot.send_message(chat_id=update.effective_chat.id,
+                             text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
 
 
 def messageHandler(update: Update, context: CallbackContext):
-    # if update.effective_chat.username not in allowedUsernames:
-    #     context.bot.send_message(chat_id=update.effective_chat.id, text="You are not allowed to use this bot")
-    #     return
-
-    # here these are  commands
-    # if randomPeopleText in update.message.text:
-    #     # update.message.reply_text('this is  bhargav2')
-    #     buttons2 = [[KeyboardButton('bhargav')],[KeyboardButton('bhargav2')]]
-    #     context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to my bot!", reply_markup=ReplyKeyboardMarkup(buttons2))
-    #     # image = get(randomPeopleUrl).content
-    # if randomImageText in update.message.text:
-    #     update.message.reply_text('this is  bhargav3')
-    # image = get(randomPImageUrl).content
-    # if image:
-    #     context.bot.sendMediaGroup(chat_id=update.effective_chat.id, media=[InputMediaPhoto(image, caption="")])
-
-    #     buttons = [[InlineKeyboardButton("👍", callback_data="like")], [InlineKeyboardButton("👎", callback_data="dislike")]]
-    #     context.bot.send_message(chat_id=update.effective_chat.id, reply_markup=InlineKeyboardMarkup(buttons), text="Did you like the image?")
-
-    # sem 3 subjact buttons
-    def sem3(update: Update, context: CallbackContext):
-        update.message.reply_text('bhargavbhai')
-        sem3_button = [[KeyboardButton('D.S.A.')], [KeyboardButton('D.B.M.S.')], [KeyboardButton('p&s')], [
-            KeyboardButton('ETC')], [KeyboardButton('ic')], [KeyboardButton('d.f.')], [KeyboardButton('exit')]]
-        context.bot.send_message(chat_id=update.effective_chat.id,
-                                 text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem3_button))
 
     if 'exit' in update.message.text:
         # function call to messege handeler
@@ -205,14 +47,18 @@ def messageHandler(update: Update, context: CallbackContext):
                                  text="Welcome to my bot! ", reply_markup=ReplyKeyboardMarkup(sem1_button))
 
     # SEM3
+    if 'send' in update.message.text:
+        chat_id = update.message.chat_id
+        file_url = "https://files.smallpdf.com/files/6f5d810d3c4a7d1abeada35c8fd4e5a8.jpg?name=-5847955727556131000_121.jpg"
+        context.bot.send_document(
+            chat_id=chat_id, document=file_url, caption='This is a forwarded document')
+        
     if 'D.S.A.' in update.message.text:
         # here forward the massage for dsa
         message = update.message
         update.message.reply_text('BOOKs')
         context.bot.send_message(chat_id=1241390756, text=message.text)
         # update.message.forward_from_message_id(8532)
-        # context.bot.send_message(chat_id=update.message.chat_id,reply_to_message_id=update.message.message_id)
-        # here you can forward the dsa books
         update.message.reply_text('PYSQs')
         # here you can forward the dsa pysqs
         update.message.reply_text('NOTEs')
@@ -357,8 +203,4 @@ def messageHandler(update: Update, context: CallbackContext):
 
 dispatcher.add_handler(CommandHandler("start", startCommand))
 dispatcher.add_handler(MessageHandler(Filters.text, messageHandler))
-# dispatcher.add_handler(CallbackQueryHandler(queryHandler))
 updater.start_polling()
-
-# exit button not work solve it
-# now exit button work solve by call previus function button 
