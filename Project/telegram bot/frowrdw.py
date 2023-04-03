@@ -22,7 +22,7 @@ def send_document(update, context):
 
 def main():
     # Your bot's token
-    token = "5369531550:AAFekKbGtdylAHeTTj06Zyd5YuMWyHrdH_0"
+    token = "1925876251:AAFv-MKqysOlq1GdSk0wBP4gc3C6zHr8Rp0"
 
     # Create the Updater and pass it your bot's token.
     updater = Updater(token, use_context=True)
