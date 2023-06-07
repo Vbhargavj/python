@@ -1,7 +1,7 @@
 from telegram.ext import Updater, Filters, CommandHandler, MessageHandler
 from truecallerpy import search_phonenumber
-userDict = [1241390756,]
 
+userDict = [1241390756,]
 
 def start(update, context):
     if update.message.from_user.id in userDict:
@@ -10,7 +10,7 @@ def start(update, context):
             "Helloo you can find name of number no need to add +91")
     else:
         context.bot.send_message(
-            chat_id="1241390756", text=f'{update.message.from_user.name} {update.message.from_user.id} ')
+            chat_id=1241390756, text=f'{update.message.from_user.name} {update.message.from_user.id} ')
         update.message.reply_text(
             "you can not access the bot,if you access then contact 'mere mai bap ko ")
 
@@ -23,17 +23,14 @@ def add(update, context):
 
 
 def true(update, context):
-
+    id = "a1i0a--ftoz2jF1F_PHVBXRDdFKu_la7mME-fhFbTaLbVOtjCSUUNChLp6pkqNw9"
     if update.message.from_user.id in userDict:
 
         number = update.message.text
         num = str(number)
         num = num.replace(' ', '')
-
-        print(num)
+        
         if num.replace('+', '').isnumeric():
-
-            id = 'a1i0a--ftoz2jF1F_PHVBXRDdFKu_la7mME-fhFbTaLbVOtjCSUUNChLp6pkqNw9'
 
             response = (search_phonenumber(number, "IN", id))
 
@@ -58,7 +55,7 @@ def true(update, context):
 def main():
 
     updater = Updater(
-        token='6050075547:AAHc8zkVYGA2T8UdC8LensCcGlbNIbO2WYk', use_context=True)
+        token="6050075547:AAHc8zkVYGA2T8UdC8LensCcGlbNIbO2WYk", use_context=True)
 
     dispatcher = updater.dispatcher
 
