@@ -1,0 +1,26 @@
+﻿0,Gender,Income,Education Level,Marital Status,Employment Status, Industry
+32,Female,45000,Bachelor's,Single,Employed,Technology
+45,Male,65000,Master's,Married,Employed,Finance
+28,Female,35000,High School,Single,Unemployed,None
+52,Male,80000,Doctorate,Married,Employed,Education
+36,Female,55000,Bachelor's,Divorced,Employed,Healthcare
+40,Male,70000,Bachelor's,Married,Self-Employed,Consulting
+29,Female,40000,Associate's,Single,Employed,Retail
+55,Male,90000,Master's,Married,Employed,Engineering
+33,Female,47000,Bachelor's,Single,Employed,Government
+47,Male,75000,Bachelor's,Married,Self-Employed,Entertainment
+41,Female,60000,Master's,Single,Employed,Nonprofit
+38,Male,52000,High School,Divorced,Employed,Construction
+31,Female,48000,Bachelor's,Married,Employed,Technology
+49,Male,85000,Doctorate,Married,Employed,Finance
+27,Female,30000,High School,Single,Unemployed,None
+54,Male,92000,Master's,Married,Employed,Education
+39,Female,58000,Bachelor's,Married,Self-Employed,Consulting
+30,Male,42000,Associate's,Single,Employed,Retail
+56,Female,96000,Doctorate,Married,Employed,Healthcare
+35,Male,55000,Bachelor's,Single,Employed,Government
+48,Female,73000,Bachelor's,Married,Self-Employed,Entertainment
+42,Male,65000,Master's,Divorced,Employed,Nonprofit
+37,Female,50000,High School,Married,Employed,Construction
+34,Male,49000,Bachelor's,Single,Unemployed,None
+51,Female,82000,Master's,Married,Employed,Engineering

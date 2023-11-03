@@ -73,7 +73,7 @@ def true(update, context):
 def main():
 
     updater = Updater(
-        token='6050075547:AAHc8zkVYGA2T8UdC8LensCcGlbNIbO2WYk', use_context=True)
+        token='5975659245:AAFEebUbu3783BNxp-3FdBLCxkUNxAZF3Js', use_context=True)
     updater.bot.send_message(chat_id=adminid,text='hello i am online')
     dispatcher = updater.dispatcher
 

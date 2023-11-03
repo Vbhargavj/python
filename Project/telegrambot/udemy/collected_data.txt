@@ -1,0 +1,12 @@
+Title: Android App Development with Kotlin | Beginner to Advanced
+Img src: https://www.howtofree.org/wp-content/uploads/2023/10/Android-App-Development-with-Kotlin-Beginner-to-Advanced.jpg
+Course link: https://www.howtofree.org/android-app-development-with-kotlin/
+
+Title: Python Desktop Application Development with PyQt
+Img src: https://www.howtofree.org/wp-content/uploads/2021/06/656218_88c7_2.jpg
+Course link: https://www.howtofree.org/python-for-app-development/
+
+Title: Learn Java Android Complete Guide Free Video Course Download
+Img src: https://www.howtofree.org/wp-content/uploads/2021/06/3519984_95e1_5.jpg
+Course link: https://www.howtofree.org/java-android-complete-guide/
+

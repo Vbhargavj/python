@@ -1,0 +1,12 @@
+Title: Webpack 2: The Complete Developer’s Guide
+Img src: https://www.howtofree.org/wp-content/uploads/2021/06/1039062_e553_4.jpg
+Course link: https://www.howtofree.org/webpack-2/
+
+Title: The Complete Sketch 5 Course – Design Apps & Websites 2023
+Img src: https://www.howtofree.org/wp-content/uploads/2021/06/1855830_155f_4.jpg
+Course link: https://www.howtofree.org/sketch-with-design-apps-websites/
+
+Title: NestJS Zero to Hero – Modern TypeScript Back-end Development
+Img src: https://www.howtofree.org/wp-content/uploads/2021/06/NestJS-Zero-to-Hero-Modern-TypeScript-Back-end-Development.jpg
+Course link: https://www.howtofree.org/nestjs-zero-to-hero-5/
+
