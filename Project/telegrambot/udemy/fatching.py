@@ -1,12 +1,11 @@
-import requests 
+import requests
 
-url='https://www.howtofree.org/category/web-appliciation/'
+url = "https://mkvcinemas.mov/leo-2023/"
 
-response=requests.post(url)
+response = requests.post(url)
 
-data=response.text
+data = response.text
 
 
-
-with open("collect_data.html", "w") as f:
+with open("collect_movie_data.html", "w") as f:
     f.write(data)

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>Name Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+
+  <body ng-controller="myCtrl">
+    <label for="search">Enter First Letter:</label>
+    <input type="text" id="search" ng-model="searchText" />
+
+    <ul>
+      <li ng-repeat="item in items | filter:startsWithLetter">{{ item }}</li>
+    </ul>
+
+    <script>
+      var app = angular.module("myApp", []);
+
+      app.controller("myCtrl", function ($scope) {
+        $scope.items = ["bhargav", "jack"];
+
+        $scope.startsWithLetter = function (item) {
+          if (!$scope.searchText || $scope.searchText.length === 0) {
+            return true;
+          }
+
+          return item.toLowerCase().startsWith($scope.searchText.toLowerCase());
+        };
+      });
+    </script>
+  </body>
+</html>

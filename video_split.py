@@ -21,4 +21,4 @@ def split_video_into_equal_parts(input_file, output_prefix, num_parts):
         segment_num += 1
 
 # Usage: Provide the input video file, output prefix, and the number of parts to split
-split_video_into_equal_parts('input_video.mp4', 'output_segment', 4)  # Split into 4 equal parts
+split_video_into_equal_parts('vikram.mkv', 'vikram', 4)  # Split into 4 equal parts

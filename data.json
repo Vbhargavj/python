@@ -1,0 +1,31 @@
+{
+    "start": {
+        "it": {
+            "sem6": {
+                "ds": "link1",
+                "ada": "link2",
+                "cn": "link3"
+            },
+            "sem5": {
+                "sd": "link1",
+                "adasdf": "link2",
+                "cndf": "link3"
+            }
+        },
+        "cs": {
+            "sem6": {
+                "ds": "link1",
+                "ada": "link2",
+                "cn": "link3"
+            }
+        },
+        "mech": {
+            "sem6": {
+                "ds": "link1",
+                "ada": "link2",
+                "cn": "link3"
+    
+            }
+        }
+    }
+}
